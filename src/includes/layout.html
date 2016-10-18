@@ -66,42 +66,45 @@
 
             'header-navbar-fixed'        Enables fixed header
         -->
-        <div id="page-container" class="sidebar-l sidebar-o sidebar-mini side-scroll header-navbar-fixed">
-            
-            {% include "components/side-overlay.html" %} 
+        <div id="app">
+            <div id="page-container" class="sidebar-l sidebar-o sidebar-mini side-scroll header-navbar-fixed">
+                
+                {% include "components/side-overlay.html" %} 
 
-            {% include "components/siderbar.html" %} 
+                {% include "components/siderbar.html" %} 
 
-            {% include "components/header.html" %} 
+                {% include "components/header.html" %} 
 
 
 
-            
-
-            
-            <!-- Main Container -->
-            <main id="main-container">
                 
 
-                <!-- Page Content -->
-                {% block page-content %}
-                {% endblock %}
                 
-                <!-- END Page Content -->
-            </main>
-            <!-- END Main Container -->
+                <!-- Main Container -->
+                <main id="main-container">
+                    
 
-            <!-- Footer -->
-            <footer id="page-footer" class="content-mini content-mini-full font-s12 bg-gray-lighter clearfix">
-                <div class="pull-right">
-                    Crafted with <i class="fa fa-heart text-city"></i> by <a class="font-w600" href="http://goo.gl/vNS3I" target="_blank">huarenlife web</a>
-                </div>
-                <div class="pull-left">
-                    <a class="font-w600" href="http:huarenmatch.com" target="_blank">Huaren</a> &copy; 2016-10
-                </div>
-            </footer>
-            <!-- END Footer -->
+                    <!-- Page Content -->
+                    {% block page-content %}
+                    {% endblock %}
+                    
+                    <!-- END Page Content -->
+                </main>
+                <!-- END Main Container -->
+
+                <!-- Footer -->
+                <footer id="page-footer" class="content-mini content-mini-full font-s12 bg-gray-lighter clearfix">
+                    <div class="pull-right">
+                        Crafted with <i class="fa fa-heart text-city"></i> by <a class="font-w600" href="http://goo.gl/vNS3I" target="_blank">huarenlife web</a>
+                    </div>
+                    <div class="pull-left">
+                        <a class="font-w600" href="http:huarenmatch.com" target="_blank">Huaren</a> &copy; 2016-10
+                    </div>
+                </footer>
+                <!-- END Footer -->
+            </div>
         </div>
+        
         <!-- END Page Container -->
 
 

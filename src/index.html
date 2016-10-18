@@ -11,7 +11,7 @@
 {% endblock %}
     
 {% block page-content %}
-<div class="content" id="app">
+<div class="content">
 	<!-- My Block -->
 	<div class="block block-rounded block-bordered">
 		<div class="block-header">
@@ -33,7 +33,7 @@
 				</li>
 			</ul>
 			<h3 class="block-title">
-				<i class="fa fa-cog"></i> 编辑{{ keyword }}
+				<i class="fa fa-cog"></i> 后台审核 <span style="border-radius:100px;" class="label label-danger">&#123&#123 surplus &#125&#125</span>
 			</h3>
 		</div>
 		<div class="block-content">
@@ -478,7 +478,8 @@
 			current: {
 				index: 0,
 				data: {}
-			}
+			},
+			surplus: 0
 		},
 		methods: {
 			pass: function (index,val) {
@@ -495,6 +496,15 @@
 					this.current.data = this.data[index];
 				}
 			}
+  		},
+		computed: {
+    		surplus: function () {
+				let num = 0;
+				this.data.map((item) => {
+					if(item.status == 0) num++;
+				})
+      			return num;
+    		}
   		}
 	})
 
